@@ -2,9 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-def generate_frequent_itemsets_support_bar_charts(frequent_itemsets_per_level_dict):
-    all_frequent_itemsets_dict = get_all_frequent_itemsets_support_dict(frequent_itemsets_per_level_dict)
-    cleaned_itemsets = get_cleaned_itemsets_list(all_frequent_itemsets_dict)
+def generate_frequent_itemsets_support_bar_charts(frequent_itemsets_support_dict):
+    cleaned_itemsets = get_cleaned_itemsets_list(frequent_itemsets_support_dict)
 
     df = pd.DataFrame(cleaned_itemsets, columns=['Itemset', 'Support Count'])
 
