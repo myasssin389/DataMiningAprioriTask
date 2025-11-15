@@ -1,14 +1,6 @@
-from dataclasses import dataclass
 from typing import FrozenSet, Dict, List
 from itertools import combinations
-
-@dataclass
-class Rule:
-    A: FrozenSet[str]
-    B: FrozenSet[str]
-    support_A_U_B: int
-    support_A: int
-    support_B: int
+from rule_dataclass import Rule
 
 def generate_rules(frequent_itemsets: Dict[FrozenSet[str], int]) -> List[Rule]:
     rules: List[Rule] = []
